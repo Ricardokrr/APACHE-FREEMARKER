@@ -1,0 +1,85 @@
+-------------   NOTAS   -------------------
+
+String es una secuencia de caracteres entre comillas
+
+
+number, solo hay un tipo numerico, is call numbers, este puede
+tener todo tipo, decimales enteros etc
+
+
+Boolean es verdadero o falso en minuscula y no tiene comillas
+al rededor osea que lo hace mas simple
+
+
+${"HOLA"} //RESULT => HOLA
+
+${"123" + "542"}  //RESULT =>665
+
+${true?c} //RESULT => true
+${false?c} //RESULT => false
+
+${true ? String('yes','no')}     //RESULT => yes
+${false ? String('yes','no')}    //RESULT => no
+
+
+
+
+
+
+-----------DIRECTIVE----------------
+
+
+diective son las intrucciones de freemarker para manipular
+alguna parte de la plantilla, se necesitan sentencias, condicionales o iteracion
+
+<#diectivename parameters>
+</#diectivename>
+
+
+
+
+
+-----------IF / ELSE / ELSEIF----------------
+
+las condicionales se manejan asi
+
+example 1:
+
+    <#if condition>
+        do this
+
+    <#else>
+        do this
+
+    </#if>
+
+
+example 2:
+
+    <#if condition1>
+        do A
+
+    <#elseif condition2>
+        do B
+
+    </#else>
+        do this
+
+    </#if>
+
+
+
+-----------LIST----------------
+
+almacena el valor del elemento actual
+la variable del bucle solo existe dentro del cuerpo de 
+la lista
+
+
+example 1:
+
+    <#list list_of_items as item>
+    
+        do something to each item
+
+    </#list>
